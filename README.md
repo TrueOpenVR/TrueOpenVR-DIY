@@ -1,8 +1,8 @@
-# DIY
-DIY VR devices.
-## HMD
-[HDMI 5.5 display](http://ali.pub/2oy6xl), [Arduino](http://ali.pub/2oy73f) with [MPU 6050 tracker](http://ali.pub/2oy76c), lighten ping pong ball ([LED](http://ali.pub/2oy7dj), [150 Ohm resistor](http://ali.pub/2oy7iz)).
-## Conrollers
-Arduino with MPU 6050 tracker ([firmware with Kalman filter](https://github.com/TKJElectronics/KalmanFilter/tree/master/examples/MPU6050)) and [buttons](http://ali.pub/2oy7rx), lighten ping pong ball (LED, 150 Ohm resistor).
-## PC
-2-4 [Sony PlayStation Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye).
+﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/README.md) 
+[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/README.RU.md) 
+# DIY VR devices
+Creating VR devices compatible with TrueOpenVR and SteamVR (via a compatible driver).
+## VR HMD
+[Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.md) 
+## VR Controllers
+[Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers.md) 
