@@ -2,7 +2,7 @@
 [![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.RU.md) 
 # VR HMD
 The VR HMD is made from an HDMI display, tracker rotation, tracker positioning and VR headsets for Android smartphones.
-## HDMI дисплей
+## HDMI display
 ![](https://user-images.githubusercontent.com/9499881/44113330-c2cd0b12-a018-11e8-87e9-68803760ea6b.png)
 
 HDMI display can be found on [AliExpress](http://ali.pub/2oy6xl) or Ebay. The best choice will be a 5.5 inch display, as it fits most VR headsets.

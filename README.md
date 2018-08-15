@@ -3,6 +3,6 @@
 # DIY VR devices
 Creating VR devices compatible with TrueOpenVR and SteamVR (via a compatible driver).
 ## VR HMD
-[Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.md) 
+[Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/HMD/blob/master/HMD.md) 
 ## VR Controllers
 [Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers.md) 
