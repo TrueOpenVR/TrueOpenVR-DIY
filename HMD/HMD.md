@@ -29,6 +29,8 @@ For good positioning need from 1 to 4 [Sony Playstation 3 Eye](https://www.ebay.
 To build a tracker need to buy a ping pong ball, [LED (yellow, red, green or blue)](http://ali.pub/2oy7dj) и [resistor 150-220 Ohm](http://ali.pub/2oy7iz). Setting up "PSMoveService" and demonstrating such a tracker in the beginning [video](https://www.youtube.com/watch?v=IunGVk89-TY). 
 The LED is best wrapped in a white piece of plastic packaging to make the light from the LED lights in all directions.
 
+![](https://user-images.githubusercontent.com/9499881/44270911-d4b8e700-a249-11e8-816a-5a6df6b6fbda.png) ![](https://user-images.githubusercontent.com/9499881/44270935-df737c00-a249-11e8-9731-a238f24ce4c6.png)
+
 For "PSMoveService" and virtual trackers, a simple setup is needed, more details [here](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/PSMoveService).
 ## VR headset
 Can be used:

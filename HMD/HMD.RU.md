@@ -26,8 +26,12 @@ HDMI дисплей можно найти на [AliExpress](http://ali.pub/2oy6x
 ## Трекер позиции
 Для хорошего позиционирования нужны от 1 до 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) камер. Одной камеры хватит для позиционирования вблизи, двух для 180 трекинга, трех для 360 трекинга и четыре будет идеально отслеживаться в 360 трекинге.
 
+![](https://user-images.githubusercontent.com/9499881/44270886-c074ea00-a249-11e8-9542-196e9e5650ba.png)
+
 Для создания трекера нужно купить пинг понг шарик, [светодиод (желтый, красный, зеленый или синий)](http://ali.pub/2oy7dj) и [резистор на 150-220 Ом](http://ali.pub/2oy7iz). Настройка "PSMoveService" и демонстрация такого трекера в начале [видео](https://www.youtube.com/watch?v=IunGVk89-TY). 
 Светодиод лучше обернуть в белый кусок пластиковой упаковки, чтобы свет от светодиода светил во все стороны. 
+
+![](https://user-images.githubusercontent.com/9499881/44270911-d4b8e700-a249-11e8-816a-5a6df6b6fbda.png) ![](https://user-images.githubusercontent.com/9499881/44270935-df737c00-a249-11e8-9731-a238f24ce4c6.png)
 
 Для "PSMoveService" и виртуальных трекеров нужна простая настройка, подробнее [тут](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/PSMoveService).
 ## VR гарнитура
