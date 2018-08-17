@@ -1,6 +1,5 @@
-﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.md) 
-[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.RU.md) 
-# VR шлем
+﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) 
+[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) # VR шлем
 VR шлем делается из HDMI дисплея, трекера вращения, трекера позиционирования и VR гарнтиры для Android смартфонов.
 ## HDMI дисплей
 ![](https://user-images.githubusercontent.com/9499881/44113330-c2cd0b12-a018-11e8-87e9-68803760ea6b.png)
@@ -23,7 +22,7 @@ HDMI дисплей можно найти на [AliExpress](http://ali.pub/2oy6x
 Для других плат вращения также нужна прошивка.
 
 Вот пара [примеров вывода](https://github.com/TrueOpenVR/TrueOpenVR-DIY/HMD/Arduino) для скетчей Arduino, чтобы прошивка была совместима с трекером "RazorIMU" TrueOpenVR.
-## Трекер позиционирования
+## Трекер позиции
 Для хорошего позиционирования нужны от 1 до 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) камер. Одной камеры хватит для позиционирования вблизи, двух для 180 трекинга, трех для 360 трекинга и четыре будет идеально отслеживаться в 360 трекинге.
 
 Для создания трекера нужно купить пинг понг шарик, [светодиод (желтый, красный, зеленый или синий)](http://ali.pub/2oy7dj) и [резистор на 150-220 Ом](http://ali.pub/2oy7iz). Настройка "PSMoveService" и демонстрация такого трекера в начале [видео](https://www.youtube.com/watch?v=IunGVk89-TY). 

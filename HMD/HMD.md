@@ -1,5 +1,5 @@
-﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.md) 
-[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD.RU.md) 
+﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) 
+[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) 
 # VR HMD
 The VR HMD is made from an HDMI display, tracker rotation, tracker positioning and VR headsets for Android smartphones.
 ## HDMI display
@@ -23,7 +23,7 @@ Can also use [MPU 6050 GY-521](http://ali.pub/2oy76c), it is cheap, but some com
 For other rotation boards, firmware is also needed.
 
 Here are a couple [examples of output](https://github.com/TrueOpenVR/TrueOpenVR-DIY/HMD/Arduino) for the sketches of Arduino, so that the firmware was compatible with the tracker "RazorIMU" TrueOpenVR.
-## Positioning tracker
+## Position tracker
 For good positioning need from 1 to 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) cameras. One camera is enough for positioning near, two for 180 tracking, three for 360 tracking and four will be ideally tracked in 360 tracking.
 
 To build a tracker need to buy a ping pong ball, [LED (yellow, red, green or blue)](http://ali.pub/2oy7dj) и [resistor 150-220 Ohm](http://ali.pub/2oy7iz). Setting up "PSMoveService" and demonstrating such a tracker in the beginning [video](https://www.youtube.com/watch?v=IunGVk89-TY). 
