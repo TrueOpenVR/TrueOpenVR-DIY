@@ -1,5 +1,6 @@
 ﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) 
-[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) # VR шлем
+[![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md)
+# VR шлем
 VR шлем делается из HDMI дисплея, трекера вращения, трекера позиционирования и VR гарнтиры для Android смартфонов.
 ## HDMI дисплей
 ![](https://user-images.githubusercontent.com/9499881/44113330-c2cd0b12-a018-11e8-87e9-68803760ea6b.png)
