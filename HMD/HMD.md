@@ -37,3 +37,5 @@ Can be used:
 
 ## Union
 Can use only one USB power cable if you solder the wire that will split the power into the display, the tracker and the ping pong ball with the LED. On the display, a ping pong ball (through a resistor of 150-200 ohms) and Arduino power 5V is applied in parallel, that is, 5V and GND wires go to them, and data wires (Data + and Data -) go only to the Arduino tracker.
+
+![](https://user-images.githubusercontent.com/9499881/44270352-5445b680-a248-11e8-90c4-e84a6f4f0299.png)
