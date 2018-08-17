@@ -26,6 +26,8 @@ Here are a couple [examples of output](https://github.com/TrueOpenVR/TrueOpenVR-
 ## Position tracker
 For good positioning need from 1 to 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) cameras. One camera is enough for positioning near, two for 180 tracking, three for 360 tracking and four will be ideally tracked in 360 tracking.
 
+![](https://user-images.githubusercontent.com/9499881/44270886-c074ea00-a249-11e8-9542-196e9e5650ba.png)
+
 To build a tracker need to buy a ping pong ball, [LED (yellow, red, green or blue)](http://ali.pub/2oy7dj) и [resistor 150-220 Ohm](http://ali.pub/2oy7iz). Setting up "PSMoveService" and demonstrating such a tracker in the beginning [video](https://www.youtube.com/watch?v=IunGVk89-TY). 
 The LED is best wrapped in a white piece of plastic packaging to make the light from the LED lights in all directions.
 
