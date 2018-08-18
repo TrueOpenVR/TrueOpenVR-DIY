@@ -12,7 +12,7 @@ For positioning the controller, attach a ping pong ball to it, solder the LED th
 
 More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
 
-## DayDream контроллеры
+## DayDream controllers
 The Daydream controller allows you to get rotation data and buttons. To position the controller, you need to stick a ping pong ball to it, make a switch so as not to consume the battery and get soldered to the battery. 
 
 More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
