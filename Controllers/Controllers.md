@@ -31,7 +31,7 @@ Android smartphone allows to get rotational data and buttons, more details [here
 More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
 
 ## Razer Hydra
-Good ready and not expensive option. Driver is required. For use with SteamVR the driver is already [there](https://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/).
+Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/).
 
 ## PS Move
 Good ready and not expensive option. A full-featured driver "PSMoveService" is required, which will allow not only to receive the position data of ping pong balls, but also to receive rotation data and buttons.
