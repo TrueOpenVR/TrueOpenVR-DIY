@@ -22,7 +22,7 @@ Can also use [MPU 6050 GY-521](http://ali.pub/2oy76c), it is cheap, but some com
 
 For other rotation boards, firmware is also needed.
 
-Here are a couple [examples of output](https://github.com/TrueOpenVR/TrueOpenVR-DIY/HMD/Arduino) for the sketches of Arduino, so that the firmware was compatible with the tracker "RazorIMU" TrueOpenVR.
+Here are a couple [examples of output](https://github.com/TrueOpenVR/TrueOpenVR-DIY/tree/master/HMD/Arduino) for the sketches of Arduino, so that the firmware was compatible with the tracker "RazorIMU" TrueOpenVR.
 ## Position tracker
 For good positioning need from 1 to 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) cameras. One camera is enough for positioning near, two for 180 tracking, three for 360 tracking and four will be ideally tracked in 360 tracking.
 
