@@ -1,5 +1,12 @@
 //Controller TrueOpenVR
 
+#define GRIP_BTN  0x0001
+#define THUMB_BTN 0x0002
+#define A_BTN   0x0004
+#define B_BTN   0x0008
+#define MENU_BTN  0x0010
+#define SYS_BTN   0x0020
+
 //Digital pins number / номера цифровых пинов
 const byte TriggerBtnPin = 2;
 const byte GripBtnPin = 3;
@@ -48,32 +55,32 @@ void loop() {
 
   //Checking press buttons 
   if (digitalRead(TriggerBtnPin) == LOW)
-    ctrl[3] = 255;
+    ctrl[3] = 1;
 
   if (digitalRead(GripBtnPin) == LOW)
-    ctrl[4] += 1; //GRIPBTN = 1
+    ctrl[4] += GRIP_BTN;
 
   if (digitalRead(ThumbStickBtnPin) == LOW)
-    ctrl[4] += 2; //THUMBSTICKBTN = 2
+    ctrl[4] += THUMB_BTN; 
 
   if (digitalRead(MenuBtnPin) == LOW)
-    ctrl[4] += 4; //MENUBTN = 4
+    ctrl[4] += MENU_BTN;
 
   if (digitalRead(SystemBtnPin) == LOW)
-   ctrl[4] += 8; //SYSTEMBTN = 8 
+   ctrl[4] += SYS_BTN;
 
   //Stick emulation
   if (digitalRead(UpStickPin) == LOW)
-    ctrl[6] = 32768; //Up
+    ctrl[6] = 1; //Up
 
   if (digitalRead(LeftStickPin) == LOW)
-    ctrl[5] = -32768; //Left
+    ctrl[5] = -1; //Left
 
   if (digitalRead(RightStickPin) == LOW)
-    ctrl[5] = 32767; //Right
+    ctrl[5] = 1; //Right
 
   if (digitalRead(DownStickPin) == LOW)
-    ctrl[6] = -32767; //Down
+    ctrl[6] = -1; //Down
 
   //Output binary
   Serial.write((byte*)&ctrl, sizeof(ctrl));

@@ -6,7 +6,7 @@ VR контроллеры можно сделать на основе Arduino, D
 ## Arduino контроллеры
 Для Arduino контроллера необходим датчик вращения и кнопки. Подробнее от трекере вращения можно прочитать в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер вращения). 
 
-Стик и триггеры можно эмулировать обычными кнопкми, вместо аналоговых. Вот тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), совместимая с драйвером "ArduinoControllers". Кнопки подпаиваются к цифровым выводам и земле. 
+Стик и триггеры можно эмулировать обычными кнопкми, вместо аналоговых. Нажимающиеся стики можно [купить на AliExpress](http://ali.pub/2zbur8). Вот тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), совместимая с драйвером "ArduinoControllers". Кнопки подпаиваются к цифровым выводам и земле. 
 
 Для позионирования контроллера прикрепить к нему пинг понг шарик, подпаять светодиод через резистор. Подробне о таком трекере позиционирования читайте в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер позиционирования).
 

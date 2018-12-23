@@ -6,7 +6,7 @@ VR controllers can be made on the basis of Arduino, DayDream controller (the dri
 ## Arduino controllers
 Arduino controller requires a rotation sensor and buttons. More information from the tracker rotation can be read in the [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (rotation tracker).
 
-The stick and triggers can be emulated with conventional buttons, instead of analog buttons. Here is the test [firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), compatible with the driver "ArduinoControllers". The buttons are soldered to the digital pins and ground.
+The stick and triggers can be emulated with conventional buttons, instead of analog buttons. Push sticks can be [bought on AliExpress](http://ali.pub/2zbur8). Here is the test [firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), compatible with the driver "ArduinoControllers". The buttons are soldered to the digital pins and ground.
 
 For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor. 
 
