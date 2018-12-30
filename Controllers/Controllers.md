@@ -34,4 +34,4 @@ More about this positioning tracker read [instructions for the VR HMD](https://g
 Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/).
 
 ## PS Move
-Good ready and not expensive option. A full-featured driver "PSMoveService" is required, which will allow not only to receive the position data of ping pong balls, but also to receive rotation data and buttons.
+Good ready and not expensive option.
