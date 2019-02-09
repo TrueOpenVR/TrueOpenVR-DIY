@@ -26,9 +26,9 @@ HDMI дисплей можно найти на [AliExpress](http://ali.pub/2oy6x
 ![](https://user-images.githubusercontent.com/9499881/52521767-bd593480-2c95-11e9-923a-648a3018d131.png)
 
 
-Для других плат вращения [совместимая прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/Arduino.Output.Bin.ino).
+Для других датчиков вращения нужна [совместимая прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/Arduino.Output.Bin.ino).
 
-Вот пара [примеров вывода](https://github.com/TrueOpenVR/TrueOpenVR-DIY/tree/master/HMD/Arduino) для скетчей Arduino, чтобы прошивка была совместима с трекером "RazorIMU" TrueOpenVR.
+Прошивки совместимы с трекером "ArduinoHMD" ("RazorIMU" ) TrueOpenVR.
 ## Трекер позиции
 Для хорошего позиционирования нужны от 1 до 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) камер. Одной камеры хватит для позиционирования вблизи, двух для 180 трекинга, трех для 360 трекинга и четыре будет идеально отслеживаться в 360 трекинге.
 

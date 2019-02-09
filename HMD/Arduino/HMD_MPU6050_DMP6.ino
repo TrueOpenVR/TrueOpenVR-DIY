@@ -343,16 +343,6 @@ void loop() {
             mypr[1] = ypr[2] * 180/M_PI;
             mypr[2] = ypr[1] * 180/M_PI;
             Serial.write((byte*) mypr, sizeof(mypr)); 
-
-            /*Serial.print("mode\t");
-            Serial.print(mypr[0]);
-            Serial.print("\t");
-            Serial.print("ypr\t");
-            Serial.print(ypr[0] * 180/M_PI);
-            Serial.print("\t");
-            Serial.print(ypr[1] * 180/M_PI);
-            Serial.print("\t");
-            Serial.println(ypr[2] * 180/M_PI);*/
         #endif
 
         #ifdef OUTPUT_READABLE_REALACCEL
