@@ -4,15 +4,23 @@
 VR контроллеры можно сделать на основе Arduino, DayDream контроллера (драйвер пока отсуствует) или использовать готовые, такие как Sony Playstation Move (для PS Move пока нет полноценного драйвера, только для виртуальных трекеров позиции - пинг понг шариков, со светодиодом).
 
 ## Arduino контроллеры
-Для Arduino контроллера необходим датчик вращения [MPU 6050 GY-521](http://ali.pub/2oy76c) и [кнопки](http://ali.pub/33lzue). 
+Для Arduino контроллера необходим [Arduino Nano](http://ali.pub/2oy73f), датчик вращения [MPU 6050 GY-521](http://ali.pub/2oy76c) и [кнопки](http://ali.pub/33lzue). 
 
-Стик и триггеры можно сделать обычными кнопкми или нажимающимся [джойстиком](http://ali.pub/2zbur8). Кнопки подпаиваются к цифровым выводам и земле. 
+Стик и триггеры можно сделать обычными кнопкми или нажимающимся [джойстиком](http://ali.pub/2zbur8). Кнопки припаиваются к цифровым выводам и земле, номера цифровых выводов есть в прошивке.
 
 Взять готовую прошивку для [MPU 6050 GY-521](http://ali.pub/2oy76c) можно [здесь](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller/Controller_MPU6050_DMP6.ino). Необходимо загрузить библиотеки и сделать калибровку, подробнее можно прочитать в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер вращения).
 
-Также есть тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), совместимая с драйвером "ArduinoControllers". 
+Также есть тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), каркас для других датчиков. 
 
 Для позионирования контроллера нужно прикрепить к нему пинг понг шарик, подпаять светодиод через резистор к VCC (5V) и GND (земле). Подробне о таком трекере позиционирования читайте в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер позиционирования).
+
+Прошивки совместимы с трекером "ArduinoControllers" TrueOpenVR.
+
+## Razer Hydra
+Хороший готовый и не дорогой вариант. Необходима доработка драйвера. Для использования со SteamVR драйвер уже [есть](https://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/).
+
+## PS Move
+Хороший готовый и не дорогой вариант. Драйвер написан, но необходимо тестирование. Стик эмулируется кнопками.
 
 ## DayDream контроллеры
 Контроллер Daydream позволяет получить данные вращения и кнопки. Для позионирования контроллера нужно приклеить к нему пинг понг шарик, сделать выключатель, чтобы не расходовать батарею и подпаяться к батарее. 
@@ -31,9 +39,3 @@ VR контроллеры можно сделать на основе Arduino, D
 Android смартфон позволяет получить данные вращения и кнопки, подробнее [здесь](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/AndroidControllers). Для позиционирования нужно использовать пинг понг шарик. 
 
 Подробне о таком трекере позиционирования читайте в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер позиционирования).
-
-## Razer Hydra
-Хороший готовый и не дорогой вариант. Необходима доработка драйвера. Для использования со SteamVR драйвер уже [есть](https://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/).
-
-## PS Move
-Хороший готовый и не дорогой вариант.

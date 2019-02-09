@@ -28,7 +28,7 @@ Here it is important to note that there are new revisions of GY-85, which are in
 
 For other rotation sensors, [compatible firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/Arduino.Output.Bin.ino) is also needed.
 
-Firmware compatible with the tracker "ArduinoHMD" ("RazorIMU") TrueOpenVR.
+Firmware compatible with the tracker "RazorIMU" TrueOpenVR.
 ## Position tracker
 For good positioning need from 1 to 4 [Sony Playstation 3 Eye](https://www.ebay.com/sch/i.html?_nkw=Sony+Plastation+Eye) cameras. One camera is enough for positioning near, two for 180 tracking, three for 360 tracking and four will be ideally tracked in 360 tracking.
 
