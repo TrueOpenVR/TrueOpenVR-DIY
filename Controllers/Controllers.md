@@ -4,11 +4,15 @@
 VR controllers can be made on the basis of Arduino, DayDream controller (the driver is not available yet) or use ready-made ones such as Sony Playstation Move (for PS Move there is no full driver yet, only for virtual position trackers - ping pong balls, with LED).
 
 ## Arduino controllers
-Arduino controller requires a rotation sensor and buttons. More information from the tracker rotation can be read in the [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (rotation tracker).
+Arduino controller requires a rotation sensor [MPU 6050 GY-521](http://ali.pub/2oy76c) and [buttons](http://ali.pub/33lzue).
 
-The stick and triggers can be emulated with conventional buttons, instead of analog buttons. Push sticks can be [bought on AliExpress](http://ali.pub/2zbur8). Here is the test [firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), compatible with the driver "ArduinoControllers". The buttons are soldered to the digital pins and ground.
+Stick and triggers can be made with the buttons or [joystick with button](http://ali.pub/2zbur8). The buttons are soldered to the digital pins and ground.
 
-For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor. 
+You can get ready firmware for [MPU 6050 GY-521](http://ali.pub/2oy76c) [here](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller/Controller_MPU6050_DMP6.ino). You need to download the library and do the calibration, more details can be found in the [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (rotation tracker).
+
+Also have the [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), compatible with the driver "ArduinoControllers". 
+
+For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor to VCC (5V) and GND. 
 
 More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
 

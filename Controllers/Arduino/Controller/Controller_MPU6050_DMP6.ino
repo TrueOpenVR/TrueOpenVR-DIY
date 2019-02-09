@@ -155,6 +155,31 @@ void dmpDataReady() {
 }
 
 
+//Controller TrueOpenVR
+
+#define GRIP_BTN  0x0001
+#define THUMB_BTN 0x0002
+#define A_BTN   0x0004
+#define B_BTN   0x0008
+#define MENU_BTN  0x0010
+#define SYS_BTN   0x0020
+
+//Digital pins number / номера цифровых пинов
+const byte TriggerBtnPin = 3;
+const byte GripBtnPin = 4;
+const byte ThumbStickBtnPin = 5;
+const byte MenuBtnPin = 6;
+const byte SystemBtnPin = 7;
+
+//Button for emulating stick movement
+//Кнопки для эмуляции движения стиков
+const byte UpStickPin = 7;
+const byte LeftStickPin = 8;
+const byte RightStickPin = 9;
+const byte DownStickPin = 10;
+
+float ctrl[7];
+
 
 // ================================================================
 // ===                      INITIAL SETUP                       ===
@@ -173,6 +198,20 @@ void setup() {
     // (115200 chosen because it is required for Teapot Demo output, but it's
     // really up to you depending on your project)
     Serial.begin(115200);
+  
+    //Setup pins
+    pinMode(TriggerBtnPin, INPUT_PULLUP);
+    pinMode(GripBtnPin, INPUT_PULLUP);
+    pinMode(ThumbStickBtnPin, INPUT_PULLUP);
+    pinMode(SystemBtnPin, INPUT_PULLUP);
+    pinMode(MenuBtnPin, INPUT_PULLUP);
+
+    //Button for emulating stick movement
+    //Кнопки для эмуляции движения стиков
+    pinMode(UpStickPin, INPUT_PULLUP);
+    pinMode(LeftStickPin, INPUT_PULLUP);
+    pinMode(RightStickPin, INPUT_PULLUP);
+    pinMode(DownStickPin, INPUT_PULLUP);
     
     while (!Serial); // wait for Leonardo enumeration, others continue immediately
 
@@ -327,18 +366,59 @@ void loop() {
             mpu.dmpGetQuaternion(&q, fifoBuffer);
             mpu.dmpGetGravity(&gravity, &q);
             mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
-            float newYPR[3] = {0, 0, 0};
             //Serial.print("ypr\t");
             //Serial.print(ypr[0] * 180/M_PI);
             //Serial.print("\t");
             //Serial.print(ypr[1] * 180/M_PI);
             //Serial.print("\t");
             //Serial.println(ypr[2] * 180/M_PI);
+      
+            ctrl[0] = 0;
+            ctrl[1] = 0;
+            ctrl[2] = 0;
+      
+            ctrl[0] = ypr[1] * 180/M_PI;
+            ctrl[1] = ypr[0] * 180/M_PI * -1;
+            ctrl[2] = ypr[2] * 180/M_PI;
 
-            newYPR[0] = ypr[0] * 180/M_PI;
-            newYPR[1] = ypr[2] * 180/M_PI * -1;
-            newYPR[2] = ypr[1] * 180/M_PI;
-            Serial.write((byte*) newYPR, sizeof(newYPR)); 
+            //Buttons
+            ctrl[3] = 0; //Trigger
+            ctrl[4] = 0; //Buttons
+            ctrl[5] = 0; //ThumbX
+            ctrl[6] = 0; //ThumbY
+
+            //Checking press buttons 
+            if (digitalRead(TriggerBtnPin) == LOW)
+              ctrl[3] = 1;
+
+            if (digitalRead(GripBtnPin) == LOW)
+              ctrl[4] += GRIP_BTN;
+
+            if (digitalRead(ThumbStickBtnPin) == LOW)
+              ctrl[4] += THUMB_BTN; 
+
+            if (digitalRead(MenuBtnPin) == LOW)
+              ctrl[4] += MENU_BTN;
+
+            if (digitalRead(SystemBtnPin) == LOW)
+              ctrl[4] += SYS_BTN;
+
+            //Stick emulation
+            if (digitalRead(UpStickPin) == LOW)
+              ctrl[6] = 1; //Up
+
+            if (digitalRead(LeftStickPin) == LOW)
+              ctrl[5] = -1; //Left
+
+            if (digitalRead(RightStickPin) == LOW)
+              ctrl[5] = 1; //Right
+
+            if (digitalRead(DownStickPin) == LOW)
+              ctrl[6] = -1; //Down
+      
+            //Output binary
+            Serial.write((byte*)&ctrl, sizeof(ctrl));
+        
         #endif
 
         #ifdef OUTPUT_READABLE_REALACCEL

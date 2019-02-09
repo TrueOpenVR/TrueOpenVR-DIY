@@ -8,11 +8,11 @@
 #define SYS_BTN   0x0020
 
 //Digital pins number / номера цифровых пинов
-const byte TriggerBtnPin = 2;
-const byte GripBtnPin = 3;
-const byte ThumbStickBtnPin = 4;
-const byte MenuBtnPin = 5;
-const byte SystemBtnPin = 6;
+const byte TriggerBtnPin = 3;
+const byte GripBtnPin = 4;
+const byte ThumbStickBtnPin = 5;
+const byte MenuBtnPin = 6;
+const byte SystemBtnPin = 7;
 
 //Button for emulating stick movement
 //Кнопки для эмуляции движения стиков
