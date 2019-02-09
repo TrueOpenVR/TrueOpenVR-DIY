@@ -13,14 +13,20 @@ HDMI дисплей можно найти на [AliExpress](http://ali.pub/2oy6x
 
 Подключение дисплея происходит по HDMI 1.4 или 2.0 (смотрите чтобы ваша видеокарта поддерживала нужную версию) и USB. По USB подается только питание.
 ## Трекер вращения
-Трекер вращения прощего всего сделать на основе Arduino. Можно купить [Arduino Nano ](http://ali.pub/2oy73f). К Arduino подключается плата датчиков вращения, например, [MPU 6050 GY-521](http://ali.pub/2oy76c) , MPU 9250 или MPU 3200 GY-85.
+Трекер вращения прощего всего сделать на основе Arduino. Можно купить [Arduino Nano ](http://ali.pub/2oy73f). К Arduino подключается плата датчиков вращения, например, [MPU 6050 GY-521](http://ali.pub/2oy76c), MPU 9250 или MPU 3200 GY-85.
 
-Готовая прошивка Arduino есть для MPU 3200 GY-85, называется она [Razor AHRS](https://github.com/Razor-AHRS/razor-9dof-ahrs/tree/master/Arduino). Вместе с ней идет программа для калибровки и демонстрации.
+Готовая прошивка Arduino есть для [MPU 6050 GY-521](http://ali.pub/2oy76c). Необходимо спаять по схеме, [загрузить библиотеки](https://github.com/r57zone/X360Advance-Arduino/releases/download/1.0/MPU6050-X360Advance.zip), распаковать их в папку "libraries" Arduino IDE. Положить трекер на ровную поверхость, прошить скетч "MPU6050_calibration.ino" и получить данные для калибровки. Далее нужно прошить скетч ["HMD_MPU6050_DMP6.ino"](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/HMD_MPU6050_DMP6.ino), вписав в него уже полученные данные калибровки.
+
+![](https://user-images.githubusercontent.com/9499881/52521728-e200dc80-2c94-11e9-9628-68ea3ef3dacd.png)
+
+
+Готовая прошивка Arduino есть для MPU 3200 GY-85, называется она [Razor AHRS](https://github.com/Razor-AHRS/razor-9dof-ahrs/tree/master/Arduino). Вместе с ней идет программа для калибровки и демонстрации. После калибровки замените файл "Output.ino", в папке с прошивкой, на [этот](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/Razor_AHRS/Output.ino).
 Здесь важно отметить, что появились новые ревизии GY-85, которые несовместимы с этой прошивкой. Прошивкой поддерживаются следующие сенсоры: акселерометр ADXL345, гироскоп ITG-3200 и магнитометры HMC5843, HMC5883L. Инструкцию по калибровке можно найти на [youtube](https://www.youtube.com/watch?v=J7K_TnzQBZk).
 
-Также можно использовать [MPU 6050 GY-521](http://ali.pub/2oy76c), он дешевый, но некоторые жалуются на дрейф (уходит в сторону без движения). Нужно искать прошивку и изменять её, чтобы она была совместима с трекером "RazorIMU" TrueOpenVR. Вот некоторые прошивки - [1](https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050), [2](https://github.com/terminal29/Arduino-Tracker-Plugin/tree/master/Arduino_Tracker_Sketch), [3](http://www.geekmomprojects.com/gyroscopes-and-accelerometers-on-a-chip/).
+![](https://user-images.githubusercontent.com/9499881/52521767-bd593480-2c95-11e9-923a-648a3018d131.png)
 
-Для других плат вращения также нужна прошивка.
+
+Для других плат вращения [совместимая прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/Arduino.Output.Bin.ino).
 
 Вот пара [примеров вывода](https://github.com/TrueOpenVR/TrueOpenVR-DIY/tree/master/HMD/Arduino) для скетчей Arduino, чтобы прошивка была совместима с трекером "RazorIMU" TrueOpenVR.
 ## Трекер позиции
