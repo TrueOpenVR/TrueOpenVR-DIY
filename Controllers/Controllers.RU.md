@@ -8,7 +8,7 @@ VR контроллеры можно сделать на основе Arduino, D
 
 Стик и триггеры можно сделать обычными кнопкми или нажимающимся [джойстиком](http://ali.pub/2zbur8). Кнопки припаиваются к цифровым выводам и земле, номера цифровых выводов есть в прошивке.
 
-Взять готовую прошивку для [MPU 6050 GY-521](http://ali.pub/2oy76c) можно [здесь](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller/Controller_MPU6050_DMP6.ino). Необходимо загрузить библиотеки и сделать калибровку, подробнее можно прочитать в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер вращения).
+Взять готовую прошивку для MPU 6050 GY-521 можно [здесь](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller/Controller_MPU6050_DMP6.ino). Необходимо загрузить библиотеки и сделать калибровку, подробнее можно прочитать в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер вращения).
 
 Также есть тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), каркас для других датчиков. 
 
