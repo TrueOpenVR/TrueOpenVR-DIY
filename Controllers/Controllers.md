@@ -8,7 +8,7 @@ Arduino controller requires a [Arduino Nano](http://ali.pub/2oy73f), rotation se
 
 Stick and triggers can be made with the buttons or [joystick with button](http://ali.pub/2zbur8). The buttons are soldered to the digital outputs and ground, the numbers of the digital outputs are in the firmware.
 
-You can get ready firmware for MPU 6050 GY-521 [here](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller/Controller_MPU6050_DMP6.ino). You need to download the library and do the calibration, more details can be found in the [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (rotation tracker).
+You can get ready firmware for MPU 6050 GY-521 [here](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller_MPU6050_DMP6.ino). You need to download the library and do the calibration, more details can be found in the [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (rotation tracker).
 
 Also have the [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino) skeleton for other sensors. 
 
