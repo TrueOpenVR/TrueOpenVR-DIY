@@ -15,7 +15,7 @@ HDMI дисплей можно найти на [AliExpress](http://ali.pub/2oy6x
 ## Трекер вращения
 Трекер вращения прощего всего сделать на основе Arduino. Можно купить [Arduino Nano ](http://ali.pub/2oy73f). К Arduino подключается плата датчиков вращения, например, [MPU 6050 GY-521](http://ali.pub/2oy76c), MPU 9250 или MPU 3200 GY-85.
 
-Готовая прошивка Arduino есть для [MPU 6050 GY-521](http://ali.pub/2oy76c). Необходимо спаять по схеме, [загрузить библиотеки](https://github.com/r57zone/X360Advance-Arduino/releases/download/1.0/MPU6050-X360Advance.zip), распаковать их в папку "libraries" Arduino IDE. Положить трекер на ровную поверхость, прошить скетч "MPU6050_calibration.ino" и получить данные для калибровки. Далее нужно прошить скетч ["HMD_MPU6050_DMP6.ino"](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/HMD_MPU6050_DMP6.ino), вписав в него уже полученные данные калибровки.
+Готовая прошивка Arduino есть для [MPU 6050 GY-521](http://ali.pub/2oy76c). Необходимо спаять по схеме, [загрузить библиотеки](https://github.com/r57zone/X360Advance/releases/download/1.0/Arduino.Firmware.MPU6050.X360Advance.zip), распаковать их в папку "libraries" Arduino IDE. Положить трекер на ровную поверхость, прошить скетч "MPU6050_calibration.ino" и получить данные для калибровки. Далее нужно прошить скетч ["HMD_MPU6050_DMP6.ino"](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/HMD_MPU6050_DMP6.ino), вписав в него уже полученные данные калибровки.
 
 ![](https://user-images.githubusercontent.com/9499881/52521728-e200dc80-2c94-11e9-9628-68ea3ef3dacd.png)
 

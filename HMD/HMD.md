@@ -15,7 +15,7 @@ The display connects via HDMI 1.4 or 2.0 (see that your video card supports the 
 ## Rotation tracker
 The tracker rotation is the only thing to do based on Arduino. Can buy [Arduino Nano ](http://ali.pub/2oy73f). To Arduino connect a board of sensors of rotation, for example, [MPU 6050 GY-521](http://ali.pub/2oy76c) , MPU 9250 or MPU 3200 GY-85.
 
-Ready Arduino firmware there for [MPU 6050 GY-521](http://ali.pub/2oy76c). It is necessary to solder according to the scheme, [load libraries](https://github.com/r57zone/X360Advance-Arduino/releases/download/1.0/MPU6050-X360Advance.zip), unpack them into the "libraries" folder of the Arduino IDE. Put the tracker on a flat surface, flash the sketch "MPU6050_calibration.ino" and get the data for calibration. Next, you need to flash the sketch ["HMD_MPU6050_DMP6.ino"](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/HMD_MPU6050_DMP6.ino), writing in it the already received calibration data.
+Ready Arduino firmware there for [MPU 6050 GY-521](http://ali.pub/2oy76c). It is necessary to solder according to the scheme, [load libraries](https://github.com/r57zone/X360Advance/releases/download/1.0/Arduino.Firmware.MPU6050.X360Advance.zip), unpack them into the "libraries" folder of the Arduino IDE. Put the tracker on a flat surface, flash the sketch "MPU6050_calibration.ino" and get the data for calibration. Next, you need to flash the sketch ["HMD_MPU6050_DMP6.ino"](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/Arduino/HMD_MPU6050_DMP6.ino), writing in it the already received calibration data.
 
 ![](https://user-images.githubusercontent.com/9499881/52521728-e200dc80-2c94-11e9-9628-68ea3ef3dacd.png)
 
