@@ -392,16 +392,16 @@ void loop() {
               ctrl[3] = 1;
 
             if (digitalRead(GripBtnPin) == LOW)
-              ctrl[4] += GRIP_BTN;
+              ctrl[4] |= GRIP_BTN;
 
             if (digitalRead(ThumbStickBtnPin) == LOW)
-              ctrl[4] += THUMB_BTN; 
+              ctrl[4] |= THUMB_BTN; 
 
             if (digitalRead(MenuBtnPin) == LOW)
-              ctrl[4] += MENU_BTN;
+              ctrl[4] |= MENU_BTN;
 
             if (digitalRead(SystemBtnPin) == LOW)
-              ctrl[4] += SYS_BTN;
+              ctrl[4] |= SYS_BTN;
 
             //Stick emulation
             if (digitalRead(UpStickPin) == LOW)
@@ -466,7 +466,7 @@ void loop() {
         #endif
 
         // blink LED to indicate activity
-        blinkState = !blinkState;
-        digitalWrite(LED_PIN, blinkState);
+        //blinkState = !blinkState;
+        //digitalWrite(LED_PIN, blinkState);
     }
 }

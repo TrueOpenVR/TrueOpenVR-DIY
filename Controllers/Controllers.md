@@ -12,9 +12,13 @@ You can get ready firmware for MPU 6050 GY-521 [here](https://github.com/TrueOpe
 
 Also have the [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino) skeleton for other sensors. 
 
-For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor to VCC (5V) and GND. 
+For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor to VCC (5V) and GND. More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
 
-More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
+Also for positioning can use an additional rotation sensor mounted on the shoulder. Thus, can get positioning from two yaw axes and two pitch axes by applying a spherical coordinate system to them (similar to skeletal animation in games). This metod using on the Nintendo Switch VR.
+
+![](https://user-images.githubusercontent.com/9499881/79615275-72e20c00-8113-11ea-8467-514d9fe730a6.gif)
+
+![](https://user-images.githubusercontent.com/9499881/79614778-52658200-8112-11ea-9c83-ef131954b697.gif)
 
 Firmware compatible with the tracker "ArduinoControllers" TrueOpenVR.
 
