@@ -21,7 +21,7 @@ const byte LeftStickPin = 8;
 const byte RightStickPin = 9;
 const byte DownStickPin = 10;
 
-float ctrl[7];
+float ctrl[9];
 
 void setup() {
   //Setup pins
@@ -42,49 +42,54 @@ void setup() {
 }
 
 void loop() {
+  //Position with bones rotation (two gyroscope, read more https://github.com/TrueOpenVR/TrueOpenVR-DIY)
+  ctrl[0] = 0; //x
+  ctrl[1] = 0; //y
+  ctrl[2] = 0; //z
+	
   //Rotation board - MPU 6050?
-  ctrl[0] = 0; //yaw
-  ctrl[1] = 0; //pitch
-  ctrl[2] = 0; //roll
+  ctrl[3] = 0; //yaw
+  ctrl[4] = 0; //pitch
+  ctrl[5] = 0; //roll
 
   //Buttons
-  ctrl[3] = 0; //Trigger
-  ctrl[4] = 0; //Buttons
-  ctrl[5] = 0; //ThumbX
-  ctrl[6] = 0; //ThumbY
+  ctrl[6] = 0; //Trigger
+  ctrl[7] = 0; //Buttons
+  ctrl[8] = 0; //ThumbX
+  ctrl[9] = 0; //ThumbY
 
   //Checking press buttons 
   if (digitalRead(TriggerBtnPin) == LOW)
-    ctrl[3] = 1;
+    ctrl[6] = 1;
 
   if (digitalRead(GripBtnPin) == LOW)
-    ctrl[4] |= GRIP_BTN;
+    ctrl[7] |= GRIP_BTN;
 
   if (digitalRead(ThumbStickBtnPin) == LOW)
-    ctrl[4] |= THUMB_BTN; 
+    ctrl[7] |= THUMB_BTN; 
 
   if (digitalRead(MenuBtnPin) == LOW)
-    ctrl[4] |= MENU_BTN;
+    ctrl[7] |= MENU_BTN;
 
   if (digitalRead(SystemBtnPin) == LOW)
-   ctrl[4] |= SYS_BTN;
+   ctrl[7] |= SYS_BTN;
 
   //Stick emulation
   if (digitalRead(UpStickPin) == LOW)
-    ctrl[6] = 1; //Up
+    ctrl[9] = 1; //Up
 
   if (digitalRead(LeftStickPin) == LOW)
-    ctrl[5] = -1; //Left
+    ctrl[8] = -1; //Left
 
   if (digitalRead(RightStickPin) == LOW)
-    ctrl[5] = 1; //Right
+    ctrl[8] = 1; //Right
 
   if (digitalRead(DownStickPin) == LOW)
-    ctrl[6] = -1; //Down
+    ctrl[9] = -1; //Down
 
   //Output binary
   Serial.write((byte*)&ctrl, sizeof(ctrl));
 
-  delay(20);
+  //delay(20);
   
 }
