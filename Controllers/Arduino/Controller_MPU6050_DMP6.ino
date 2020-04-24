@@ -372,21 +372,17 @@ void loop() {
             //Serial.print(ypr[1] * 180/M_PI);
             //Serial.print("\t");
             //Serial.println(ypr[2] * 180/M_PI);
-			
-			
-			//Position with bones rotation (two gyroscope, read more https://github.com/TrueOpenVR/TrueOpenVR-DIY)
-			ctrl[0] = 0; //x
-			ctrl[1] = 0; //y
-			ctrl[2] = 0; //z
       
-			
-            //ctrl[3] = 0;
-            //ctrl[4] = 0;
-            //ctrl[5] = 0;
       
-            ctrl[3] = ypr[1] * 180/M_PI;
-            ctrl[4] = ypr[0] * 180/M_PI * -1;
-            ctrl[5] = ypr[2] * 180/M_PI;
+      //Position with bones rotation (two gyroscope, read more https://github.com/TrueOpenVR/TrueOpenVR-DIY)
+            //Set pos for testing
+            ctrl[0] = -0.1; //0; //x 
+            ctrl[1] = -0.3;  //0; //y
+            ctrl[2] = -0.1; //0; //z
+      
+            ctrl[3] = ypr[0] * 180/M_PI  * -1;
+            ctrl[4] = ypr[2] * 180/M_PI;
+            ctrl[5] = ypr[1] * 180/M_PI;
 
             //Buttons
             ctrl[6] = 0; //Trigger
@@ -395,20 +391,25 @@ void loop() {
             ctrl[9] = 0; //ThumbY
 
             //Checking press buttons 
+
+            
             if (digitalRead(TriggerBtnPin) == LOW)
               ctrl[6] = 1;
 
+            int CtrlButtons = 0;
             if (digitalRead(GripBtnPin) == LOW)
-              ctrl[7] |= GRIP_BTN;
+              CtrlButtons |= GRIP_BTN;
 
             if (digitalRead(ThumbStickBtnPin) == LOW)
-              ctrl[7] |= THUMB_BTN; 
+              CtrlButtons |= THUMB_BTN; 
 
             if (digitalRead(MenuBtnPin) == LOW)
-              ctrl[7] |= MENU_BTN;
+              CtrlButtons |= MENU_BTN;
 
             if (digitalRead(SystemBtnPin) == LOW)
-              ctrl[7] |= SYS_BTN;
+              CtrlButtons |= SYS_BTN;
+
+             ctrl[7] = CtrlButtons;
 
             //Stick emulation
             if (digitalRead(UpStickPin) == LOW)
