@@ -337,7 +337,7 @@ void loop() {
 
             newYPR[0] = ypr[0] * 180/M_PI;
             newYPR[1] = ypr[2] * 180/M_PI * -1;
-            newYPR[2] = ypr[1] * 180/M_PI;
+            newYPR[2] = ypr[1] * 180/M_PI * -1;
             Serial.write((byte*) newYPR, sizeof(newYPR)); 
         #endif
 
@@ -386,7 +386,7 @@ void loop() {
         #endif
 
         // blink LED to indicate activity
-        blinkState = !blinkState;
-        digitalWrite(LED_PIN, blinkState);
+        //blinkState = !blinkState;
+        //digitalWrite(LED_PIN, blinkState);
     }
 }
