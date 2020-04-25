@@ -1,7 +1,7 @@
 ﻿[![EN](https://user-images.githubusercontent.com/9499881/33184537-7be87e86-d096-11e7-89bb-f3286f752bc6.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Controllers.md) 
 [![RU](https://user-images.githubusercontent.com/9499881/27683795-5b0fbac6-5cd8-11e7-929c-057833e01fb1.png)](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Controllers.RU.md) 
 # VR controllers
-VR controllers can be made on the basis of Arduino, DayDream controller (the driver is not available yet) or use ready-made ones such as Sony Playstation Move (for PS Move there is no full driver yet, only for virtual position trackers - ping pong balls, with LED).
+VR controllers can be made on the basis of Arduino, DayDream controller (no driver available yet) or use ready-made ones, such as Razer Hydra or Sony Playstation Move.
 
 ## Arduino controllers
 Arduino controller requires a [Arduino Nano](http://ali.pub/2oy73f), rotation sensor [MPU 6050 GY-521](http://ali.pub/2oy76c) and [buttons](http://ali.pub/33lzue).
