@@ -23,7 +23,7 @@ Also for positioning can use an additional rotation sensor mounted on the should
 Firmware compatible with the tracker "ArduinoControllers" TrueOpenVR.
 
 ## Razer Hydra
-Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/).
+Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).
 
 ## PS Move
 Good ready and not expensive option. The driver is written, but testing is needed. Stick emulated with buttons.
