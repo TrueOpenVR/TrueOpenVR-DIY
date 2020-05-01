@@ -14,13 +14,17 @@ VR контроллеры можно сделать на основе Arduino, D
 
 Для позионирования контроллера нужно прикрепить к нему пинг понг шарик, подпаять светодиод через резистор к VCC (5V) и GND (земле). Подробне о таком трекере позиционирования читайте в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер позиционирования).
 
-Также для позиционирования можно использовать дополнительный датчик вращения, закрепленный на плече. Таким образом можно получить позиционирование из двух осей yaw и двух осей pitch, применив к ним сферическую система координат (аналогично скелетной анимации в играх). Данный метод используется на Nintendo Switch. 
+Прошивки совместимы с трекером "ArduinoControllers" TrueOpenVR.
+
+
+
+Также для позиционирования можно использовать дополнительный датчик вращения, закрепленный на плече. Таким образом можно получить позиционирование из двух осей yaw и двух осей pitch, применив к ним сферическую система координат (аналогично скелетной анимации в играх), например, [так](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/blob/master/C%2B%2B/ArduinoControllersIMUPos/ArduinoControllers.cpp#L338-L378). Данный метод используется на Nintendo Switch. 
 
 ![](https://user-images.githubusercontent.com/9499881/79615275-72e20c00-8113-11ea-8467-514d9fe730a6.gif)
 
-![](https://user-images.githubusercontent.com/9499881/79614778-52658200-8112-11ea-9c83-ef131954b697.gif)
+![](https://user-images.githubusercontent.com/9499881/80840516-8e1e4280-8c0e-11ea-9a5f-96a890f12d29.gif)
 
-Прошивки совместимы с трекером "ArduinoControllers" TrueOpenVR.
+Для такого типа позиционирования есть [тестовая прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/ControllerIMUPos.ino) для Arduino (необходимо добавить чтение с двух IMU датчиков) и тестовый драйвер "ArduinoControllersIMUPos" для TrueOpenVR (необходимо тестирование и доработка).
 
 ## Razer Hydra
 Хороший готовый и не дорогой вариант. Необходима доработка драйвера. Для использования со SteamVR драйвер уже [есть](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).

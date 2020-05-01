@@ -14,13 +14,17 @@ Also have the [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/
 
 For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor to VCC (5V) and GND. More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
 
-Also for positioning can use an additional rotation sensor mounted on the shoulder. Thus, can get positioning from two yaw axes and two pitch axes by applying a spherical coordinate system to them (similar to skeletal animation in games). This metod using on the Nintendo Switch VR.
+Firmware compatible with the tracker "ArduinoControllers" TrueOpenVR.
+
+
+
+Also for positioning can use an additional rotation sensor mounted on the shoulder. Thus, can get positioning from two yaw axes and two pitch axes by applying a spherical coordinate system to them (similar to skeletal animation in games), like [so](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/blob/master/C%2B%2B/ArduinoControllersIMUPos/ArduinoControllers.cpp#L338-L378). This metod using on the Nintendo Switch VR.
 
 ![](https://user-images.githubusercontent.com/9499881/79615275-72e20c00-8113-11ea-8467-514d9fe730a6.gif)
 
-![](https://user-images.githubusercontent.com/9499881/79614778-52658200-8112-11ea-9c83-ef131954b697.gif)
+![](https://user-images.githubusercontent.com/9499881/80840516-8e1e4280-8c0e-11ea-9a5f-96a890f12d29.gif)
 
-Firmware compatible with the tracker "ArduinoControllers" TrueOpenVR.
+For this type of positioning, there is a [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/ControllerIMUPos.ino) for Arduino (need to add reading from two IMU sensors) and a test driver "ArduinoControllersIMUPos" for TrueOpenVR (you need to test and modify).
 
 ## Razer Hydra
 Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).
