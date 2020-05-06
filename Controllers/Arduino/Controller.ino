@@ -21,78 +21,84 @@ const byte LeftStickPin = 8;
 const byte RightStickPin = 9;
 const byte DownStickPin = 10;
 
-float ctrl[9];
+float ctrl[12];
 
 void setup() {
-  //Setup pins
-  pinMode(TriggerBtnPin, INPUT_PULLUP);
-  pinMode(GripBtnPin, INPUT_PULLUP);
-  pinMode(ThumbStickBtnPin, INPUT_PULLUP);
-  pinMode(SystemBtnPin, INPUT_PULLUP);
-  pinMode(MenuBtnPin, INPUT_PULLUP);
+	//Setup pins
+	pinMode(TriggerBtnPin, INPUT_PULLUP);
+	pinMode(GripBtnPin, INPUT_PULLUP);
+	pinMode(ThumbStickBtnPin, INPUT_PULLUP);
+	pinMode(SystemBtnPin, INPUT_PULLUP);
+	pinMode(MenuBtnPin, INPUT_PULLUP);
 
-  //Button for emulating stick movement
-  //Кнопки для эмуляции движения стиков
-  pinMode(UpStickPin, INPUT_PULLUP);
-  pinMode(LeftStickPin, INPUT_PULLUP);
-  pinMode(RightStickPin, INPUT_PULLUP);
-  pinMode(DownStickPin, INPUT_PULLUP);
-  
-  Serial.begin(115200);
+	//Button for emulating stick movement
+	//Кнопки для эмуляции движения стиков
+	pinMode(UpStickPin, INPUT_PULLUP);
+	pinMode(LeftStickPin, INPUT_PULLUP);
+	pinMode(RightStickPin, INPUT_PULLUP);
+	pinMode(DownStickPin, INPUT_PULLUP);
+
+	Serial.begin(115200);
 }
 
 void loop() {
-  //Position with bones rotation (two gyroscope, read more https://github.com/TrueOpenVR/TrueOpenVR-DIY)
-	ctrl[0] = -0.1; //0; //x 
-	ctrl[1] = -0.3;  //0; //y
-	ctrl[2] = -0.1; //0; //z
-	
-  //Rotation board - MPU 6050?
-  ctrl[3] = 0; //yaw
-  ctrl[4] = 0; //pitch
-  ctrl[5] = 0; //roll
+	//Position with bones rotation (two gyroscope, read more https://github.com/TrueOpenVR/TrueOpenVR-DIY)
+	ctrl[0] = 0; ////x -0.1
+	ctrl[1] = 0;  //y -0.3
+	ctrl[2] = 0; //y -0.1
+	//If X,Y,Z positions are zeros, then the position is calculated based on IMUs
+	//Если X,Y,Z позиции по нулям значит позиция рассчитывается на основе IMUs
 
-  //Buttons
-  ctrl[6] = 0; //Trigger
-  ctrl[7] = 0; //Buttons
-  ctrl[8] = 0; //ThumbX
-  ctrl[9] = 0; //ThumbY
+	//Rotation controller - MPU 6050
+	ctrl[3] = 0; //yaw
+	ctrl[4] = 0; //pitch
+	ctrl[5] = 0; //roll
 
-  //Checking press buttons 
-  if (digitalRead(TriggerBtnPin) == LOW)
-    ctrl[6] = 1;
+	//Position shoulder
+	ctrl[6] = 0; //yaw
+	ctrl[7] = 0; //pitch
 
-  int CtrlButtons = 0;
-  if (digitalRead(GripBtnPin) == LOW)
-    CtrlButtons |= GRIP_BTN;
+	//Buttons
+	ctrl[8] = 0; //Buttons
+	ctrl[9] = 0; //Trigger
+	ctrl[10] = 0; //ThumbX
+	ctrl[11] = 0; //ThumbY
 
-  if (digitalRead(ThumbStickBtnPin) == LOW)
-    CtrlButtons |= THUMB_BTN; 
+	//Checking press buttons 
+	int CtrlButtons = 0;
+	if (digitalRead(GripBtnPin) == LOW)
+	CtrlButtons |= GRIP_BTN;
 
-  if (digitalRead(MenuBtnPin) == LOW)
-    CtrlButtons |= MENU_BTN;
+	if (digitalRead(ThumbStickBtnPin) == LOW)
+	CtrlButtons |= THUMB_BTN; 
 
-  if (digitalRead(SystemBtnPin) == LOW)
-    CtrlButtons |= SYS_BTN;
+	if (digitalRead(MenuBtnPin) == LOW)
+	CtrlButtons |= MENU_BTN;
 
-  ctrl[7] = CtrlButtons;
+	if (digitalRead(SystemBtnPin) == LOW)
+	CtrlButtons |= SYS_BTN;
 
-  //Stick emulation
-  if (digitalRead(UpStickPin) == LOW)
-    ctrl[9] = 1; //Up
+	ctrl[8] = CtrlButtons;
 
-  if (digitalRead(LeftStickPin) == LOW)
-    ctrl[8] = -1; //Left
+	//Trigger
+	if (digitalRead(TriggerBtnPin) == LOW)
+	ctrl[9] = 1;
 
-  if (digitalRead(RightStickPin) == LOW)
-    ctrl[8] = 1; //Right
+	//Stick emulation
+	if (digitalRead(UpStickPin) == LOW)
+	ctrl[11] = 1; //Up
 
-  if (digitalRead(DownStickPin) == LOW)
-    ctrl[9] = -1; //Down
+	if (digitalRead(LeftStickPin) == LOW)
+	ctrl[10] = -1; //Left
 
-  //Output binary
-  Serial.write((byte*)&ctrl, sizeof(ctrl));
+	if (digitalRead(RightStickPin) == LOW)
+	ctrl[10] = 1; //Right
 
-  //delay(20);
-  
+	if (digitalRead(DownStickPin) == LOW)
+	ctrl[11] = -1; //Down
+
+	//Output binary
+	Serial.write((byte*)&ctrl, sizeof(ctrl));
+
+	//delay(20);
 }

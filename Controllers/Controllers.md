@@ -3,6 +3,9 @@
 # VR controllers
 VR controllers can be made on the basis of Arduino, DayDream controller (no driver available yet) or use ready-made ones, such as Razer Hydra or Sony Playstation Move.
 
+## Razer Hydra
+Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).
+
 ## Arduino controllers
 Arduino controller requires a [Arduino Nano](http://ali.pub/2oy73f), rotation sensor [MPU 6050 GY-521](http://ali.pub/2oy76c) and [buttons](http://ali.pub/33lzue).
 
@@ -10,24 +13,18 @@ Stick and triggers can be made with the buttons or [joystick with button](http:/
 
 You can get ready firmware for MPU 6050 GY-521 [here](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller_MPU6050_DMP6.ino). You need to download the library and do the calibration, more details can be found in the [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (rotation tracker).
 
-Also have the [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino) skeleton for other sensors. 
+Also have the [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino) skeleton for other sensors. Firmware compatible with the tracker "ArduinoControllers" TrueOpenVR.
 
 For positioning the controller, attach a ping pong ball to it, solder the LED through the resistor to VCC (5V) and GND. More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).
 
-Firmware compatible with the tracker "ArduinoControllers" TrueOpenVR.
 
 
-
-Also for positioning can use an additional rotation sensor mounted on the shoulder. Thus, can get positioning from two yaw axes and two pitch axes by applying a spherical coordinate system to them (similar to skeletal animation in games), like [so](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/blob/master/C%2B%2B/ArduinoControllersIMUPos/ArduinoControllers.cpp#L338-L378). This metod using on the Nintendo Switch VR.
-
+For this type of positioning, you need to add reading from the second IMU sensor to the firmware. By default, when the second sensor is not used, the fixed values are from the "Arduino Controllers.ini" configuration file. In order for the driver to read the values from Arduino, change the parameters "ShoulderYaw" and " ShoulderPitch "to"0".
 ![](https://user-images.githubusercontent.com/9499881/79615275-72e20c00-8113-11ea-8467-514d9fe730a6.gif)
 
 ![](https://user-images.githubusercontent.com/9499881/80840516-8e1e4280-8c0e-11ea-9a5f-96a890f12d29.gif)
 
-For this type of positioning, there is a [test firmware](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/ControllerIMUPos.ino) for Arduino (need to add reading from two IMU sensors) and a test driver "ArduinoControllersIMUPos" for TrueOpenVR (you need to test and modify).
-
-## Razer Hydra
-Good ready and not expensive option. Need to finalize the driver. For use with SteamVR the driver is [already](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).
+For this type of positioning, you need to add reading from the second IMU sensor to the firmware. By default, fixed values from the "Arduino Controllers.ini" configuration file are used. In order for the driver to read the values from Arduino, change the parameters "ShoulderYaw" and " ShoulderPitch "to"0".
 
 ## PS Move
 Good ready and not expensive option. The driver is written, but testing is needed. Stick emulated with buttons.
@@ -46,6 +43,6 @@ The driver can be developed on the basis of [this code](https://github.com/gb211
 ## Android smartphones
 [![youtube](https://user-images.githubusercontent.com/9499881/44266133-7b958700-a23a-11e8-98bb-af64a35c7ecb.gif)](https://youtu.be/4V1yee-_5PA)
 
-Android smartphone allows to get rotational data and buttons, more details [here](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/AndroidControllers). 
+Android smartphone allows to get rotational data and buttons, more details [here](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/AndroidControllers). You can use a ping-pong ball for positioning. By default, the positioning is based on the yaw and pitch axes, as well as on the fixed shoulder axes located in the "AndroidControllers.ini" configuration file.
 
 More about this positioning tracker read [instructions for the VR HMD](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) (position tracker).

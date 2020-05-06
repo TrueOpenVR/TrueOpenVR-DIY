@@ -178,7 +178,7 @@ const byte LeftStickPin = 8;
 const byte RightStickPin = 9;
 const byte DownStickPin = 10;
 
-float ctrl[9];
+float ctrl[12];
 
 
 // ================================================================
@@ -375,26 +375,29 @@ void loop() {
       
       
       //Position with bones rotation (two gyroscope, read more https://github.com/TrueOpenVR/TrueOpenVR-DIY)
+            
             //Set pos for testing
-            ctrl[0] = -0.1; //0; //x 
-            ctrl[1] = -0.3;  //0; //y
-            ctrl[2] = -0.1; //0; //z
-      
-            ctrl[3] = ypr[0] * 180/M_PI  * -1;
-            ctrl[4] = ypr[2] * 180/M_PI;
+            ctrl[0] = 0; ////x -0.1
+            ctrl[1] = 0;  //y -0.3
+            ctrl[2] = 0; //y -0.1
+            //If X,Y,Z positions are zeros, then the position is calculated based on IMUs
+            //Если X,Y,Z позиции по нулям значит позиция рассчитывается на основе IMUs
+            
+            ctrl[3] = ypr[0] * 180/M_PI;
+            ctrl[4] = ypr[2] * 180/M_PI * -1;
             ctrl[5] = ypr[1] * 180/M_PI;
 
+            //Position shoulder
+            ctrl[6] = 0;
+            ctrl[7] = 0;
+
             //Buttons
-            ctrl[6] = 0; //Trigger
-            ctrl[7] = 0; //Buttons
-            ctrl[8] = 0; //ThumbX
-            ctrl[9] = 0; //ThumbY
+            ctrl[8] = 0; //Buttons
+            ctrl[9] = 0; //Trigger
+            ctrl[10] = 0; //ThumbX
+            ctrl[11] = 0; //ThumbY
 
             //Checking press buttons 
-
-            
-            if (digitalRead(TriggerBtnPin) == LOW)
-              ctrl[6] = 1;
 
             int CtrlButtons = 0;
             if (digitalRead(GripBtnPin) == LOW)
@@ -409,20 +412,25 @@ void loop() {
             if (digitalRead(SystemBtnPin) == LOW)
               CtrlButtons |= SYS_BTN;
 
-             ctrl[7] = CtrlButtons;
+            //Buttons
+             ctrl[8] = CtrlButtons;
+
+            //Trigger
+            if (digitalRead(TriggerBtnPin) == LOW)
+              ctrl[9] = 1;
 
             //Stick emulation
             if (digitalRead(UpStickPin) == LOW)
-              ctrl[9] = 1; //Up
+              ctrl[11] = 1; //Up
 
             if (digitalRead(LeftStickPin) == LOW)
-              ctrl[8] = -1; //Left
+              ctrl[10] = -1; //Left
 
             if (digitalRead(RightStickPin) == LOW)
-              ctrl[8] = 1; //Right
+              ctrl[10] = 1; //Right
 
             if (digitalRead(DownStickPin) == LOW)
-              ctrl[9] = -1; //Down
+              ctrl[11] = -1; //Down
       
             //Output binary
             Serial.write((byte*)&ctrl, sizeof(ctrl));

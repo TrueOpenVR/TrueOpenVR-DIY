@@ -3,6 +3,9 @@
 # VR контроллеры
 VR контроллеры можно сделать на основе Arduino, DayDream контроллера (драйвер пока отсуствует) или использовать готовые, такие как Razer Hydra или Sony Playstation Move.
 
+## Razer Hydra
+Хороший готовый и не дорогой вариант. Необходима доработка драйвера. Для использования со SteamVR драйвер уже [есть](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).
+
 ## Arduino контроллеры
 Для Arduino контроллера необходим [Arduino Nano](http://ali.pub/2oy73f), датчик вращения [MPU 6050 GY-521](http://ali.pub/2oy76c) и [кнопки](http://ali.pub/33lzue). 
 
@@ -10,24 +13,19 @@ VR контроллеры можно сделать на основе Arduino, D
 
 Взять готовую прошивку для MPU 6050 GY-521 можно [здесь](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller_MPU6050_DMP6.ino). Необходимо загрузить библиотеки и сделать калибровку, подробнее можно прочитать в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер вращения).
 
-Также есть тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), каркас для других датчиков. 
+Также есть тестовая [прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/Controller.ino), каркас для других датчиков. Прошивка совместимы с трекером "ArduinoControllers" TrueOpenVR.
 
 Для позионирования контроллера нужно прикрепить к нему пинг понг шарик, подпаять светодиод через резистор к VCC (5V) и GND (земле). Подробне о таком трекере позиционирования читайте в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер позиционирования).
 
-Прошивки совместимы с трекером "ArduinoControllers" TrueOpenVR.
 
 
-
-Также для позиционирования можно использовать дополнительный датчик вращения, закрепленный на плече. Таким образом можно получить позиционирование из двух осей yaw и двух осей pitch, применив к ним сферическую система координат (аналогично скелетной анимации в играх), например, [так](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/blob/master/C%2B%2B/ArduinoControllersIMUPos/ArduinoControllers.cpp#L338-L378). Данный метод используется на Nintendo Switch. 
+Также для позиционирования можно использовать дополнительный датчик вращения, закрепленный на плече. Таким образом можно получить позиционирование из двух осей yaw и двух осей pitch, применив к ним сферическую система координат (аналогично скелетной анимации в играх), например, [так](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/blob/master/C%2B%2B/ArduinoControllers/ArduinoControllers.cpp#L322-L376). Данный метод используется на Nintendo Switch.
 
 ![](https://user-images.githubusercontent.com/9499881/79615275-72e20c00-8113-11ea-8467-514d9fe730a6.gif)
 
 ![](https://user-images.githubusercontent.com/9499881/80840516-8e1e4280-8c0e-11ea-9a5f-96a890f12d29.gif)
 
-Для такого типа позиционирования есть [тестовая прошивка](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Arduino/ControllerIMUPos.ino) для Arduino (необходимо добавить чтение с двух IMU датчиков) и тестовый драйвер "ArduinoControllersIMUPos" для TrueOpenVR (необходимо тестирование и доработка).
-
-## Razer Hydra
-Хороший готовый и не дорогой вариант. Необходима доработка драйвера. Для использования со SteamVR драйвер уже [есть](https://github.com/r57zone/Razer-Hydra-SteamVR-driver).
+Для такого типа позиционирования необходимо добавить чтение со второго IMU датчика в прошивку. По умолчанию, вместого второго датчика используется, фиксированные значения из конфигурационного файла "ArduinoControllers.ini". Для того, чтобы драйвер читал значения с Arduino измените параметры "ShoulderYaw" и "ShoulderPitch" на "0".
 
 ## PS Move
 Хороший готовый и не дорогой вариант. Драйвер написан, но необходимо тестирование. Стик эмулируется кнопками.
@@ -46,6 +44,6 @@ VR контроллеры можно сделать на основе Arduino, D
 ## Android смартфоны
 [![youtube](https://user-images.githubusercontent.com/9499881/44266133-7b958700-a23a-11e8-98bb-af64a35c7ecb.gif)](https://youtu.be/4V1yee-_5PA)
 
-Android смартфон позволяет получить данные вращения и кнопки, подробнее [здесь](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/AndroidControllers). Для позиционирования нужно использовать пинг понг шарик. 
+Android смартфон позволяет получить данные вращения и кнопки, подробнее [здесь](https://github.com/TrueOpenVR/TrueOpenVR-Drivers/tree/master/C%2B%2B/AndroidControllers). Для позиционирования можно использовать пинг-понг шарик. По умолчанию используется позиционирование на основе осей yaw и pitch, также на основе фиксированных осей плеча, находящихся в конфигурационном файле "AndroidControllers.ini".
 
 Подробне о таком трекере позиционирования читайте в [инструкциии для VR шлема](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) (трекер позиционирования).
