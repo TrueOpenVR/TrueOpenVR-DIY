@@ -5,7 +5,7 @@ The VR HMD is made from an HDMI display, tracker rotation, tracker positioning a
 ## HDMI display
 ![](https://user-images.githubusercontent.com/9499881/44113330-c2cd0b12-a018-11e8-87e9-68803760ea6b.png)
 
-HDMI display can be found on [AliExpress](http://ali.pub/2oy6xl) or Ebay. The best choice will be a 5.5 inch display, as it fits most VR headsets.
+HDMI display can be found on [AliExpress](http://alii.pub/65dbii) or Ebay. The best choice will be a 5.5 inch display, as it fits most VR headsets.
 
 Also on sale are 6 inch displays and divided displays, I do not recommend buying them. At the moment, you can find displays with a resolution of 1920 to 1080 (Full HD), 2560 to 1440 (2K) and 3840 to 2160 (4K).
 
@@ -43,7 +43,7 @@ For "PSMoveService" and virtual trackers, a simple setup is needed, more details
 ## VR headset
 Can be used:
 1. [Baofeng S1](http://ali.pub/2papmt), using it you have to somehow fix everything in front;
-2. [Bobovr Z4](http://ali.pub/2papt1), can put everything in it, but it's heavier and the viewing angle is smaller;
+2. [Bobovr Z4, Z6](http://alii.pub/65dct6)), can put everything in it, but it's heavier and the viewing angle is smaller;
 
 ## Union
 Can use only one USB power cable if you solder the wire that will split the power into the display, the tracker and the ping pong ball with the LED. On the display, a ping pong ball (through a resistor of 150-200 ohms) and Arduino power 5V is applied in parallel, that is, 5V and GND wires go to them, and data wires (Data + and Data -) go only to the Arduino tracker.
