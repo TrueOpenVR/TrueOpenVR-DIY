@@ -5,4 +5,6 @@
 ## VR HMD
 [Инструкция 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.RU.md) 
 ## VR контроллеры
+Внимание! Реализация контроллеров в начальной стадии и с ними имеются проблемы! Если вам нужны дешевые, хорошо работающие контроллеры, то задумайтесь о покупке Razer Hydra. Все остальные контроллеры не годятся на данный момент.
+
 [Инструкция 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Controllers.RU.md) 

@@ -5,4 +5,6 @@ Creating VR devices compatible with TrueOpenVR and SteamVR (via a compatible dri
 ## VR HMD
 [Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/HMD/HMD.md) 
 ## VR Controllers
+Attention! The implementation of the controllers is in its infancy and there are problems with them! If you're looking for cheap, well-performing controllers, consider purchasing the Razer Hydra. All other controllers are not good at the moment.
+
 [Instruction 1](https://github.com/TrueOpenVR/TrueOpenVR-DIY/blob/master/Controllers/Controllers.md) 
